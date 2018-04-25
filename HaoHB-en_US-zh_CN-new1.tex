@@ -1,0 +1,152 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+
+%\name{Jianpeng Hou}
+\name{Haibo Hao}
+%\centerline{Machine Learning; Software Development}
+%\centerline{Software Development}
+\centerline{Software Engineer}
+\vspace{2ex}
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{houjp1992@gmail.com}{(+86) 152-0000-0000}{ \url{https://github.com/houjp/}}
+%\contactInfo{haohaibo031113@163.com}{155-1003-7852}{ \url{https://github.com/haohaibo/}}
+\contactInfo{haohaibo031113@163.com}{155-1003-7852}{}
+
+%\section{\faCogs\ Skills}
+ 
+\section{\faGraduationCap\ Education}
+%\datedsubsection{\textbf{Institute of Computer Technology, Chinese Academy of Sciences}}{Sep. 2014 -- Jul. 2017}
+\datedsubsection{\textbf{Institute of Computer Technology, Chinese Academy of Sciences}}{Sep. 2015 -- Jul. 2018}
+%\textit{Master student} in Computer Software \& Theory, Rank: top 5\%
+\textit{Master student} in Computer Architecture
+%\datedsubsection{\textbf{University of Science \& Technology Beijing}}{Sep. 2010 -- Jul. 2014}
+\datedsubsection{\textbf{Xidian University}}{Sep. 2011 -- Jul. 2015}
+%\textit{Bachelor student} in Computer Science \& Technology, Rank: \nth{4}/124
+\textit{Bachelor student} in Computer Science \& Technology
+
+\section{\faUsers\ Project Experience}
+%\datedsubsection{\textbf{Big Data Analysis Platform (\href{http://159.226.40.104:18080}{http://159.226.40.104:18080})}}{Oct. 2015 -- Mar. 2016}
+%AMD GPU Matrix Multiplication and Convolution Algorithm Optimization 2017.04 - Now
+%Based on AMD CPU & GPU heterogeneous programming platform ROCm, read and analyze rocBLAS and MIOpen. Test MIOpen and cuDNN, Caffe (native) performance comparison. Optimize MIOpen, add fp16 implementation for MIOpen (in progress).
+
+%• Basics: read and absorb rocBLAS, rocBLAS & MIOpenGEMM contributor.
+%• MIOpen matrix multiplication and convolution kernel optimization, hipCaffe code migration (in progress)
+
+%\datedsubsection{\textbf{Matrix Multiplication and Convolution Algorithm Optimization on AMD GPU}}{Apr. 2017 -- Now}
+\datedsubsection{\textbf{GEMM and Convolution Algorithm Optimization on AMD GPUs}}{Aug. 2017 -- Now}
+%\role{Summer Intern}{Manager: xxx}
+By understanding the AMD GPU microarchitecture, I achieved bare-metal performance tuning on AMD Vega GPU.
+After a quick investigation of AMD GCN3 ISA architecture and LLVM assembly tools, I came to the conclusion that it is possible to build optimized assembly kernels on GCN architecture.
+%Based on AMD CPU \& GPU heterogeneous programming platform ROCm, I read and analyze rocBLAS and MIOpen source code. Test MIOpen and cuDNN, Caffe (native) performance comparison. Optimize MIOpen, add fp16 implementation for MIOpen (in progress).
+\begin{itemize}
+  %\item  Developed distributed algorithms(CART/GBDT/GBRT/RF) on Spark.
+    %\item  Basics: read and absorb rocBLAS, rocBLAS \& MIOpenGEMM contributor.
+    \item  Fully understand rocBLAS and MIOpen.
+  %\item Finished data mining components(Feature-Indexing/Feature-Merging/Feature-Normalization/Scoring).
+    \item Achieving GEMM performance tuning though benchmarking.
+%  \item Optimized xxx 5\%
+\end{itemize}
+
+%\datedsubsection{\textbf{China Telecom Big Data Application Contest (\nth{1}/1112; Team Leader)}}{Dec. 2015 -- Mar. 2016}
+\datedsubsection{\textbf{TGMM Cell Detection and Tracking Algorithm Parallel Optimization}}{Oct. 2016 -- Dec. 2016}
+%\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
+%The goal of this contest is to predict views of users with ten sites succeeding, according to four hundred million user-behavior historical records(25.38G).
+Detecting and tracking cells in the fluorescence microscopic images by TGMM(Tracking with Gaussian Mixture Model) algorithm.
+%Brief introduction: xxx
+\begin{itemize}
+  %\item Proposed and implemented a multi-target regression algorithm on Spark. Optimized F1-score 0.8\%.
+    \item Implementing Median Filter and Gaussian Mixture algorithm on the GPU.
+  %\item Designed and developed a probability ranking model for user classification. Optimized F1-score  0.6\%.
+    \item Optimize Linear algebra program by using Intel AVX512 instructions.
+%  \item xxx
+\end{itemize}
+
+%\datedsubsection{\textbf{SIGHAN-2015 Chinese Spelling Check Task (\nth{1} Place)}}{Mar. 2015 -- May. 2015}
+\datedsubsection{\textbf{CATMAID: An Image Tracing Tool}}{Jun. 2016 -- Aug. 2016}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%The goal of this task is to detect and correct spelling errors on Chinese essays.
+CATMAID (Collaborative Annotation Toolkit for Massive Amounts of Image Data) is an efficient web collaboration annotation tool. I redevelop CATMAID (40k+ python, 230k+ js) so that it can be used to annotate 5d-images.%The requirements of the 5d (x, y, z, c, t) image are met by modifying the CATMAID (3d-x, y, z) source (40k+ python, 230k+ js code).
+\begin{itemize}
+  %\item Handled this task with a unified framework which consisted of candidate generating, two stage candidates re-ranking and global decision making.
+  %\item Identify and modify the bugs of the CATMAID source code to resolve the bug that CATMAID migrated from the django low version to the high version.
+  \item I fixed some bugs when I migrate CATMAID from the django lower version to high version.
+  %\item Finished candidate generating model and two stage candidates re-ranking model. Optimized F1-score 18\%.
+  \item On the basis of HHMI Janelia Research open source project CATMAID , I implement the feature that multi-people can do annotation simultaneously.
+\end{itemize}
+
+\section{\faSitemap\ Intern Experience}
+
+\datedsubsection{\textbf{Machine daily log file compression at LogInsight}}{Mar. 2016 -- May. 2016}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%The goal of this task was to detect and correct spelling errors on Chinese essays.
+\begin{itemize}
+  %\item Developed taxi dispatching system which used to balance the supply and demand between urban areas.
+    \item I implemented the algorithm described in papter \emph{Fast and efficient log file compression}. Improving compression ratio by 17\%\textasciitilde18\% compared to gzip.
+  %\item Reconstructed the log system of dispatching based on Kafka and MySQL.
+\end{itemize}
+
+%\datedsubsection{\textbf{Baidu Online Network Technology(Beijing) Co.,Ltd}}{Dec. 2013 -- May. 2014}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%The goal of this task was to detect and correct spelling errors on Chinese essays.
+%\begin{itemize}
+%  \item Completed the multi-threaded development of LiveWDBBroom, improved the efficiency by two times.
+%  \item Completed the development of the Problems-Tracing Platform which was put into service.
+%  \item Passed the examination of Code Master(C++), certified as Good Coder.
+%\end{itemize}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+
+%\section{\faTrophy\ Academic Competitions}
+%\datedline{\textit{\nth{1} Place}~~Awarded in China Telecom Big Data Application Contest}{Mar. 2016}
+%\datedline{\textit{\nth{1} Place}~~Awarded in SIGHAN-2015 Chinese Spelling Check Task}{Jun. 2015}
+%\datedline{\textit{\nth{1} Place}~~Awarded in China College Students Computer Games Competition}{Nov. 2013}
+%\datedline{\textit{\nth{1} Prize}~~Awarded in China College Students Computer Application Contest}{Nov. 2013}
+%\datedline{\textit{\nth{1} Prize}~~Awarded in "LanQiao Cup" Software Development Contest(Beijing Division)}{Apr. 2012}
+%\datedline{\textit{Silver Medal~(\nth{17} / 200)}~~Awarded in ACM-ICPC Asia Beijing Regional Contest}{Nov. 2015}
+
+%\section{\faTrophy\ Academic Competitions}
+\section{\faTrophy\ Awards}
+%\datedline{\textit{\nth{2} Place}~~Awarded in "Huawei Cup" programming Contest}{Mar. 2014}
+\datedline{Second price in the "Huawei Cup" programming contest}{May. 2014}
+%\datedline{\textit{\nth{2} Place}~~Awarded in Xidian University scholarship}{Sep. 2012}
+\datedline{Xidian University second-class scholarships}{Sep. 2012}
+%\datedline{\textit{\nth{2} Place}~~Awarded in Xidian University Mathematical Competition}{Nov. 2013}
+\datedline{Second prize in Xidian University Mathematical modeling competition}{Jun. 2012}
+%\datedline{\textit{\nth{1} Prize}~~Awarded in China College Students Computer Application Contest}{Nov. 2013}
+%\datedline{\textit{\nth{1} Prize}~~Awarded in "LanQiao Cup" Software Development Contest(Beijing Division)}{Apr. 2012}
+%\datedline{\textit{Silver Medal~(\nth{17} / 200)}~~Awarded in ACM-ICPC Asia Beijing Regional Contest}{Nov. 2015}
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  %\item Skilled in C++, Scala, Shell. Familiar with data structures and algorithms and had good programming style.
+  \item Skilled in C, C++, Python. Familiar with data structures and algorithms and had a good programming style.
+  %\item Experienced in development of distributed machine learning algorithms.
+  \item Understand the AMD GCN GPU architecture.
+  %\item Strong theoretic knowledge on data mining and machine learning.
+  \item English : CET6.
+\end{itemize}
+
+
+\end{document}

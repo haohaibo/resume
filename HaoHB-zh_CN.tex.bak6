@@ -1,0 +1,209 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+
+
+
+%\vspace{1ex}
+\name{郝海波 }
+\centerline{求职意向: 异构计算系统软件工程师}
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+%\vspace{1ex}
+\vspace{1ex}
+%\contactInfo{haohaibo031113@163.com}{(+86) 155-1003-7852}{ \url{https://github.com/haohaibo/} }
+\contactInfo{haohaibo031113@163.com}{155-1003-7852}{ \url{https://github.com/haohaibo/} }
+%\contactInfo{haohaibo031113@163.com}{(+86) 155-1003-7852}{}
+
+
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+
+\vspace{-1ex}
+%\vspace{1.5ex}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{中国科学院计算技术研究所}~~ \ 硕士, 计算机系统结构}{2015 -- 2018}
+\vspace{1ex}
+
+\datedsubsection{\textbf{西安电子科技大学}~~ \ 学士, 计算机科学与技术}{2011 -- 2015}
+%\vspace{1ex}
+
+%\vspace{-1ex}
+
+%\vspace{1ex}
+%\section{\faUsers\ 项目经历}
+%\datedsubsection{\textbf{Deep Learning benchmark optimization}}{2017.03 -- 现在}
+%%\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+%\begin{onehalfspacing}
+%    基于Baidu Research的开源项目DeepBench，测试深度学习框架(TensorFlow,Caffe)后端库(cuDNN,MKL)在不同
+%硬件平台(GPU,MIC)上的性能。并在此基础上做卷积神经网络性能优化。
+%\begin{itemize}
+%  \item 在GPU和MIC端测试GEMM，Convolution, RNN的浮点峰值。分析出不同平台的性能瓶颈。为后端库开发人员提供有用的建议。
+%\vspace{0.5ex}
+%  \item 在我们已有的GEMM，Convolution汇编优化基础上，实现一个开源的深度学习后端库。
+%\end{itemize}
+%\end{onehalfspacing}
+
+\vspace{1ex}
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{AMD GPU矩阵乘和卷积算法的优化}}{2017.04 -- 现在}
+%\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\begin{onehalfspacing}
+     %阅读并分析AMD平台rocBLAS和深度学习后端库MIOpen。
+     基于AMD CPU\&GPU异构编程平台ROCm，阅读并分析rocBLAS和MIOpen。测试MIOpen和cuDNN，Caffe(native)的性能对比。优化MIOpen，为
+     MIOpen增加fp16的实现。
+    %基于Baidu Research的开源项目DeepBench，测试深度学习框架(TensorFlow,Caffe)后端库(cuDNN,MKL)在不同
+%硬件平台(GPU,MIC)上的性能。并在此基础上做卷积神经网络性能优化。
+\begin{itemize}
+  %\item 在GPU和MIC端测试GEMM，Convolution, RNN的浮点峰值。分析出不同平台的性能瓶颈。为后端库开发人员提供有用的建议。
+  \item 已有基础：阅读并吸收rocBLAS，rocBLAS contributor。
+\vspace{0.5ex}
+  \item MIOpen矩阵乘和卷积kernel优化，hipCaffe代码移植。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{TGMM细胞检测与追踪算法并行优化} }{2016.10 -- 现在}
+%\role{实习}{经理: 高富帅}
+%xxx后端开发
+\begin{onehalfspacing}
+   采用TGMM(Tracking with Gaussian Mixture Model)算法检测和追踪荧光显微图像中的细胞。
+\begin{itemize}
+   % \item 采用TGMM(Tracking with Gaussian Mixture Model)算法检测和追踪荧光显微图像中的细胞。
+%\vspace{0.5ex}
+  \item 在GPU端实现Median Filter,KNN和Gaussian Mixture Model计算的并行加速。
+\vspace{0.5ex}
+  \item 用C++11多线程优化部分串行代码。
+\end{itemize}
+\end{onehalfspacing}
+
+%\vspace{-1.5ex}
+%\vspace{2ex}
+
+\datedsubsection{\textbf{CATMAID-5d图像标注工具二次开发}}{2016.06 -- 2016.09}
+%\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\begin{onehalfspacing}
+CATMAID(Collaborative Annotation Toolkit for Massive Amounts of Image Data) 是一个高效
+的 web 协同标注工具。
+通过修改CATMAID(3d-x,y,z)源码来满足标注5d(x,y,z,c,t)图像的需求。
+\begin{itemize}
+  \item 找出并修改了CATMAID源码的bug，解决了CATMAID从django低版本向高版本迁移的错误。
+\vspace{0.5ex}
+  \item 在HHMI Janelia Research Campus开源项目CATMAID的基础上做二次开发，实现5d图像多人同时在线标注的功能。
+\end{itemize}
+\end{onehalfspacing}
+
+%\vspace{-1.5ex}
+
+%\datedsubsection{\textbf{SIGHAN-2015 Chinese Spelling Check Task}}{2015.03 -- 2015.05}
+%\role{\LaTeX, Python}{个人项目}
+%\begin{onehalfspacing}
+%该评测任务是对繁体中文进行拼写检查,给出正确的拼写结果。
+%\begin{itemize}
+ % \item 实现候选生成排序模型：根据同音、近音、形近字,为句中每一个繁体字生成候选, 并打分排序。
+ % \item 实现两轮候选重排序模型：采用简单特征进行预排序,在第一次排序的基础上结合复杂特征进行第二次排序,以此提高排序效率。最终取得第一名，F值超出第二名18\%。
+%\end{itemize}
+%\end{onehalfspacing}
+
+%\vspace{-1.5ex}
+
+%\vspace{2ex}
+%\datedsubsection{\textbf{LC-3模拟器 ISA}}{2014.07 -- 2014.08}
+%%\role{\LaTeX, Python}{个人项目}
+%\begin{onehalfspacing}
+%LC-3模拟器汇编层次上走迷宫算法的递归实现，中断调用子程序的编写。
+%\begin{itemize}
+% \item 掌握LC-3 ISA。
+%\vspace{0.5ex}
+% \item 熟悉从基本门电路到有限状态机、ALU、控制器系统的构造LC-3模拟器的过程。
+%\end{itemize}
+%\end{onehalfspacing}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\vspace{-1ex}
+\vspace{1.5ex}
+\section{\faSitemap\ 实习经历}
+\datedsubsection{\textbf{LogInsight公司 ~日志压缩/~算法工程师}}{2016.03 -- 2016.05}
+\vspace{-0.5ex}
+%\role{\LaTeX, Python}{个人项目}
+\begin{onehalfspacing}
+%优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\begin{itemize}
+  \item 完成论文Fast and efficient log file compression日志压缩算法的开发,相比gzip平均可以提升17\%\textasciitilde18\%的压缩比。
+ % \item 基于Kafka及MySQL完成专车调度日志系统重构，解耦子模块间相互依赖，提高系统可用性。
+\end{itemize}
+\end{onehalfspacing}
+
+\vspace{-1.5ex}
+
+%\datedsubsection{\textbf{百度~网页搜索部~/~研发工程师}}{2013.12 -- 2014.05}
+%\vspace{-0.5ex}
+%\role{\LaTeX, Python}{个人项目}
+%\begin{onehalfspacing}
+%\begin{itemize}
+%  \item  完成 livewdbbroom 工具多线程开发,通过测试并上线,效率提升 2 倍以上。
+%  \item 完成离线时效性日志体系建设及离线时效性问题追查平台建设,并上线。
+%  \item 通过 Code Master(C++) 考试,获得 Good Coder 认证。
+%\end{itemize}
+%\end{onehalfspacing}
+
+\vspace{-1ex}
+\vspace{1.5ex}
+
+\section{\faTrophy\ 奖项}
+\datedline{\textit{西安电子科技大学 “华为杯” 程序设计二等奖}}{2014.05}
+\vspace{0.5ex}
+\datedline{\textit{西安电子科技大学校二等奖学金}}{2012.08}
+\vspace{0.5ex}
+\datedline{\textit{西安电子科技大学数学建模校赛二等奖}}{2012.06}
+%\datedline{\textit{银牌 (\nth{17}/200)}~ACM-ICPC 国际大学生程序设计竞赛亚洲区域赛北京赛区}{2015.11}
+%\datedline{\textit{四强 (\nth{4}/2293)}~阿里巴巴大数据竞赛“新浪微博互动预测大赛”}{2015.12}
+%\datedline{\textit{一等奖}~华北五省及港澳台大学生计算机应用大赛}{2013.11}
+%\datedline{\textit{一等奖}~全国软件专业人才设计与创业大赛北京赛区}{2012.04}
+
+\vspace{-1ex}
+\vspace{1.5ex}
+
+\section{\faCogs\ 个人能力}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  %\item 了解 C++、CUDA 、Python。
+  \item 语言C > C++ > CUDA = Python。
+  \item 熟悉基本数据结构和算法,有良好的编程风格。
+  \item 了解NVIDIA GPU架构、熟悉CUDA。
+  \item 英语: CET-4 489 CET-6 426 
+%  \item 熟悉数据挖掘、机器学习领域基本算法。
+\end{itemize}
+
+%\section{\faInfo\ 其他}
+%% increase linespacing [parsep=0.5ex]
+%\begin{itemize}[parsep=0.5ex]
+%  \item 技术博客: http://blog.yours.me
+%  \item GitHub: \url{https://github.com/haohaibo}
+%  \item 英语: CET-4 489 CET-6 426 
+%\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
